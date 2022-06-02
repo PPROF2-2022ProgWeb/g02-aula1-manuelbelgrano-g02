@@ -1,0 +1,229 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Página insitucional de la biblioteca Manuel Belgrano, Villa General Belgrano, Córdoba "
+  />
+  <meta
+    name="keywords"
+    content="biblioteca, córdoba, membresía, buscador de libros, reserva online"
+  />
+  <title>Biblioteca Popular Dr.Manuel Belgrano</title>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/estiloinicio.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://kit.fontawesome.com/a2c2a40119.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <script type="text/javascript">
+    function validar() {
+      var form = document.form;
+      if (form.nombre.value == 0) {
+        alert("El campo nombre esta vacio");
+        form.nombre.value = "";
+        form.nombre.focus();
+        return false;
+      }
+
+      if (form.telefono.value == 0) {
+        alert("El campo telefono esta vacio");
+        form.telefono.value = "";
+        form.telefono.focus();
+        return false;
+      }
+      if (form.correo.value == 0) {
+        alert("El campo correo esta vacio");
+        form.correo.value = "";
+        form.correo.focus();
+        return false;
+      }
+      if (form.mensaje.value == 0) {
+        alert("El campo mensaje esta vacio");
+        form.mensaje.value = "";
+        form.mensaje.focus();
+        return false;
+      }
+      alert("Datos enviados con exitos");
+      form.submit();
+    }
+  </script>
+</head>
+
+<body class="contenedor-principal container-fluid">
+  <header>
+    <div class="container-fluid contenedor" id="contenedor-barra">
+      <nav
+        class="
+          navbar navbar-expand-md navbar-light
+          border-3 border-bottom
+          scrolling-navbar
+          fixed-top
+        "
+        id="barra-nav"
+      >
+        <div class="container-fluid" id="iconos">
+          <a href="index.html" class="navbar-brand fs-3 fw-bolder"> M.B </a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div id="menu" class="collapse navbar-collapse" id="menu-">
+            <ul class="navbar-nav mx-auto" id="lista">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="login.html"
+                  >Iniciar sesión</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="sobre-nosotros.html"
+                  >Sobre nosotros</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Nuestros servicios
+                </a>
+                <ul class="dropdown-menu" id="lista1">
+                  <li>
+                    <a href="#" class="dropdown-item text-white"
+                      >Buscador de libros</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item text-white"
+                      >Envío a domicilio</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item text-white"
+                      >Reserva online</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="imagen-contacto container-fluid"></main>
+
+  <section class="sombra-formulario">
+    <h2>Contacto</h2>
+    <h3 class="contacto">
+      Teléfono: 3546 462195 <br />
+      E-mail: biblio.vgb@gmail.com <br />Dirección: Julio A.Roca 128 <br />
+      Localidad: Villa General Belgrano <br />
+      Provincia: Córdoba País: Argentina
+    </h3>
+    <!-- FORMULARIO-->
+    <form name="form" onsubmit="return validar()" class="formulario-ct">
+      <fieldset>
+        <legend>Contactanos llenando todos los campos</legend>
+
+        <div class="contenedor-campos">
+          <div class="campo-ct">
+            <label>Nombre</label>
+            <input
+              class="imput-text"
+              name="nombre"
+              type="text"
+              placeholder="Tu Nombre"
+            />
+          </div>
+
+          <div class="campo-ct">
+            <label>Telefono</label>
+            <input
+              class="imput-text"
+              name="telefono"
+              type="tel"
+              placeholder="Tu Telefono"
+            />
+          </div>
+
+          <div class="campo-ct">
+            <label for="">Correo</label>
+            <input
+              class="imput-text"
+              name="correo"
+              type="email"
+              placeholder="Tu Correo"
+            />
+          </div>
+
+          <div class="campo-ct">
+            <label for="">Mensaje</label>
+            <textarea
+              name="mensaje"
+              placeholder="Ingresa tu mensaje"
+              class="imput-text"
+            ></textarea>
+          </div>
+        </div>
+        <div class="enviar">
+          <input
+            onclick="validar();"
+            class="boton"
+            type="submit"
+            value="Enviar"
+          />
+        </div>
+      </fieldset>
+    </form>
+  </section>
+  <footer class="bg-dark text-white" id="pie-pagina">
+    <i class="fas fa-home"></i>
+    <small> Julio A Roca 128, X5194 Villa Gral. Belgrano, Córdoba</small> <br />
+    <i class="fas fa-phone"></i> <small> 540 3546- 462195</small> <br />
+    <i class="fab fa-instagram-square"></i> Redes <br />
+    <i class="fas fa-envelope-square"></i> biblio.vgb@gmail.com
+  </footer>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/validaciones.js"></script>
+</body>

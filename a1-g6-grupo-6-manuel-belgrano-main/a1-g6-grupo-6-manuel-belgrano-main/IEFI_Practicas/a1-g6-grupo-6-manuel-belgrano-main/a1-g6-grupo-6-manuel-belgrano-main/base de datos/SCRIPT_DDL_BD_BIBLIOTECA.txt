@@ -1,0 +1,104 @@
+-- MySQL Workbench Synchronization
+-- Generated: 2021-10-30 17:25
+-- Model: New Model
+-- Version: 1.0
+-- Project: Name of the project
+-- Author: Administrador
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+CREATE SCHEMA IF NOT EXISTS `BIBLIOTECA` DEFAULT CHARACTER SET utf8 ;
+
+CREATE TABLE IF NOT EXISTS `BIBLIOTECA`.`PRESTAMO` (
+  `Num_pedido` INT(11) NOT NULL,
+  `Codigo_libro` INT(11) NOT NULL,
+  `Codigo_usuario` INT(11) NOT NULL,
+  `Fecha_salida` DATE NOT NULL,
+  `Fecha_max_devolucion` DATE NOT NULL,
+  `Fecha_devolucion` DATE NOT NULL,
+  PRIMARY KEY (`Num_pedido`),
+  UNIQUE INDEX `Num_pedido_UNIQUE` (`Num_pedido` ASC),
+  UNIQUE INDEX `Codigo_libro_UNIQUE` (`Codigo_libro` ASC),
+  UNIQUE INDEX `Codigo_usuario_UNIQUE` (`Codigo_usuario` ASC),
+  CONSTRAINT `Codigo_usuario`
+    FOREIGN KEY (`Codigo_usuario`)
+    REFERENCES `BIBLIOTECA`.`USUARIOS` (`Codigo_usuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `Codigo_libro`
+    FOREIGN KEY (`Codigo_libro`)
+    REFERENCES `BIBLIOTECA`.`LIBROS` (`Codigo_libro`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE IF NOT EXISTS `BIBLIOTECA`.`LOGIN` (
+  `Cod_usuario` INT(11) NOT NULL,
+  `Contraseña` BLOB NOT NULL,
+  `Mail` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`Mail`),
+  UNIQUE INDEX `Mail_UNIQUE` (`Mail` ASC),
+  CONSTRAINT `Cod_usuario`
+    FOREIGN KEY (`Cod_usuario`)
+    REFERENCES `BIBLIOTECA`.`USUARIOS` (`Codigo_usuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE IF NOT EXISTS `BIBLIOTECA`.`LIBROS` (
+  `Codigo_libro` INT(11) NOT NULL AUTO_INCREMENT,
+  `Nombre_libro` VARCHAR(45) NOT NULL,
+  `Editorial` VARCHAR(45) NOT NULL,
+  `Autor` VARCHAR(45) NOT NULL,
+  `Genero` VARCHAR(45) NOT NULL,
+  `Numero_paginas` INT(11) NOT NULL,
+  `Año_edicion` DATE NOT NULL,
+  `Precio` DOUBLE NOT NULL,
+  PRIMARY KEY (`Codigo_libro`),
+  UNIQUE INDEX `Codigo_libros_UNIQUE` (`Codigo_libro` ASC),
+  UNIQUE INDEX `Nombre_libro_UNIQUE` (`Nombre_libro` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE IF NOT EXISTS `BIBLIOTECA`.`USUARIOS` (
+  `Codigo_usuario` INT(11) NOT NULL AUTO_INCREMENT,
+  `Nombre` VARCHAR(45) NOT NULL,
+  `Apellido` VARCHAR(45) NOT NULL,
+  `DNI` INT(11) NOT NULL,
+  `Domicilio` VARCHAR(45) NOT NULL,
+  `Localidad` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`Codigo_usuario`),
+  UNIQUE INDEX `Codigo_usuario_UNIQUE` (`Codigo_usuario` ASC),
+  UNIQUE INDEX `DNI_UNIQUE` (`DNI` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Placeholder table for view `BIBLIOTECA`.`view1`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `BIBLIOTECA`.`view1` (`id` INT);
+
+
+USE `BIBLIOTECA`;
+
+-- -----------------------------------------------------
+-- View `BIBLIOTECA`.`view1`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `BIBLIOTECA`.`view1`;
+USE `BIBLIOTECA`;
+
+
+DELIMITER $$
+USE `BIBLIOTECA`$$
+$$
+
+DELIMITER ;
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
