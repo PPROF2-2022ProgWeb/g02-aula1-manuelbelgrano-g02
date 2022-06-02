@@ -8,5 +8,4 @@ Este proyecto se realiza para otorgarle a la biblioteca una página web instituc
 base de datos, etc)  que posea una buena interfaz que mejore la experiencia del usuario y  otorgarle un buen posicionamiento web.
 Este proyecto va dirigido tanto a la biblioteca cómo a sus usuarios / clientes.
 
-Grupo N°6: 
-Artaza Carla Daniela Calanit , Biolé Amanda Paola, Bierbrauer Fanny, Arraigada Carlos Máximo, Garcia Leandro Emanuel, Balderrama Juan Manuel, Lambrisca Tobías Ezequiel. 
+Grupo N°6:   Artaza Carla Daniela Calanit , Biolé Amanda Paola, Arraigada Carlos Máximo, Balderrama Juan Manuel.
