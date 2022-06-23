@@ -1,0 +1,118 @@
+/*cuadro de mensaje consulta*/
+.area-texto textarea{
+    width:300px;height:80px;border: 1px dotted #000099;}
+
+* {
+    box-sizing: border-box;
+   
+  }
+  
+  .container {
+   
+    max-width: 90%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  
+  [type="checkbox"] {
+    display: none;
+  }
+  
+  [type="checkbox"]:checked + label::before {
+    background: #252323;
+    transition: 0.5s;
+    transform: rotate(180deg);
+  }
+  
+  [type="checkbox"]:checked + label {
+    color: white;
+  }
+  
+  .form {
+
+    border-top: 2px solid #6d6d6d;
+    max-width: 400px;
+    padding: 30px 50px;
+    margin: auto;
+    margin-top: 10px;
+    background:#af20d3;
+  }
+
+  .form-titulo {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    font-family: arial;;
+  }
+  
+  .form-input {
+    margin-bottom: 30px;
+  }
+  
+  .form-input label {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+  }
+  
+  .form-input input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid black;
+  }
+  
+  .form-input input:focus + label {
+    font-weight: bold;
+    color: #0c0c0c;
+  }
+  
+  .form-terminosYcondiciones {
+    margin-left: 15px;
+    position: relative;
+    color: #0c0c0c;
+    font-size: 13px;
+  }
+  
+  .form-terminosYcondiciones label::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 1px solid #110f0f;
+    position: absolute;
+    left: -14px;
+  }
+  
+  .form-boton input {
+    background: #3c3b3b;
+    color: white;
+    padding: 10px 30px;
+    font-size: 15px;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    border: none;
+  }
+  
+  .form-boton input:hover {
+    background: black;
+    transition: 0.5s;
+  }
+  
+  .mensajeError {
+    color: rgb(169, 8, 8);
+    margin-top: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .mensajeCorrecto {
+    text-align: center;
+    font-weight: bold;
+  }
