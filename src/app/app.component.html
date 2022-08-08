@@ -1,0 +1,57 @@
+<header id="header">
+    <nav>
+        
+    
+    <a [routerLink]= "['/home']" [routerLinkActive] = "['active']">Inicio</a>
+    <a href="#sobrenosotros">Nosotros</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#servicios">Servicios</a>
+    <a [routerLink]= "['/tienda']" [routerLinkActive] = "['active']">Suscripción</a>
+    <a [routerLink]= "['/contacto']" [routerLinkActive] = "['active']">Contacto </a>
+    <a [routerLink]= "['/login']" [routerLinkActive] = "['active']" id="login" [class.login]= "identificado == true ">Iniciar sesión </a>
+    </nav>
+    
+    <section class="textos-header">
+    <h1>La Lectura es una Fabrica de Sueños</h1>
+    <h2>Biblioteca Popular Dr. Manuel Belgrano </h2>
+    </section>
+    
+    <div class="wave"  style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 345.56,-104.29 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+    
+  <div *ngIf="identificado"  class="identificado" (click)="abrirMenu()" (dblclick)="cerrarMenu()">
+   <img src="../assets/user.png" alt="Usuario" style=" width: 70px;  ">
+  </div>
+
+<div  id="miperfil"  *ngIf="menu">
+  <ul id="menu" >
+    <li><a href="">Mi perfil</a></li>
+    <li><a href="">Cambiar contraseña</a></li>
+    <li><a href="" (click)="cerrarSesion()">Cerrar sesion</a></li>
+</ul>
+</div>
+
+
+</header>
+
+
+
+<!--
+<app-sobre-nosotros></app-sobre-nosotros>
+ 
+<app-galeria></app-galeria>
+
+<app-servicios></app-servicios>
+
+<app-contacto></app-contacto>
+
+<app-footer></app-footer>
+
+<app-login></app-login>
+
+<app-registrarse></app-registrarse>
+
+<app-tienda></app-tienda>
+-->
+<router-outlet></router-outlet>
+
+

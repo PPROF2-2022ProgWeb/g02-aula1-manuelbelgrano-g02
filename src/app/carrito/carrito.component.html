@@ -1,0 +1,59 @@
+
+<div class="contenedor-carrito">
+
+    <div class="caja caja2">
+        <h4>{{promo}}</h4>
+        <div class="contenido">
+          <img src="../../assets/ilustraciones3.png" alt="">
+          <p class="precio">{{promoElegida}} </p>
+          <p class="info">Acceso ilimitado al contenido exclusivo </p>
+          <p class="info">Acceso ilimitado al contenido exclusivo </p>
+          <p class="info">Acceso ilimitado al contenido exclusivo </p>
+        </div>
+      </div>
+    
+
+
+      <form  id="form_contact">
+
+ <div class="caja1">
+
+        <h4> Datos del titular de la tarjeta</h4>
+
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido">
+    
+        <label for="email">Email</label>
+        <input type="email" name="email">
+
+
+        <label for="tarjeta">N° de la tarjeta</label>
+        <input type="text" name="tarjeta">
+
+</div>
+<div class="caja2">       
+        <label for="vencimiento">Vencimiento</label>
+        <input type="text" name="vencimiento">
+
+        <label for="codigo">Código</label>
+        <input type="text" name="codigo">
+
+        
+        <label for="dni">DNI</label>
+        <input type="text" name="dni">
+<br>
+        <input type="submit" value="Enviar" [routerLink]= "['/home']" [routerLinkActive] = "['active']">
+</div> 
+    </form>
+
+
+</div>
+
+
+
+   
+   
+<app-footer></app-footer>

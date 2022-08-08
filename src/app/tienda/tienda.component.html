@@ -1,0 +1,53 @@
+<header class="contenedor-titulos">
+  <div class="titulo">
+    <h1>MEMBRESÍA</h1>
+  </div>
+
+  <div class="subtitulo">
+    <h2>Suscribite a la biblioteca y disfrutá de los privilegios de ser parte de la comunidad!</h2>
+  </div>
+</header>
+
+
+
+
+<div class="contenedor">
+
+  <div class="caja caja1" id="promoMensual">
+    <h4>PROMO MENSUAL</h4>
+    <div class="contenido">
+      <img src="../../assets/ilustraciones5.png" alt="">
+      <p class="precio">PRECIO {{promoMensual}}</p>
+      <a [routerLink]="['/carrito']" [routerLinkActive]="['active']" id="promo-mensual"  (click)="eligePromo1()">SUSCRIBIRME</a>
+      <p class="info">Acceso ilimitado al contenido exclusivo </p>
+    </div>
+  </div>
+
+
+
+  <div class="caja caja2" id="promoMensual">
+    <h4>PROMO SEMESTRAL</h4>
+    <div class="contenido">
+      <img src="../../assets/ilustraciones3.png" alt="">
+      <p class="precio">PRECIO {{promoSemestral}}</p>
+      <a [routerLink]="['/carrito']" [routerLinkActive]="['active']" id="promo-mensual" (click)="eligePromo2()">SUSCRIBIRME</a>
+      <p class="info">Acceso ilimitado al contenido exclusivo </p>
+    </div>
+  </div>
+
+
+
+    <div class="caja caja3" id="promoAnual">
+      <h4>PROMO ANUAL</h4>
+      <div class="contenido">
+        <img src="../../assets/ilustraciones4.png" alt="">
+        <p class="precio">PRECIO {{promoAnual}}</p>
+        <a [routerLink]="['/carrito']" [routerLinkActive]="['active']" id="promo-mensual"  (click)="eligePromo3()">SUSCRIBIRME</a>
+        <p class="info">Acceso ilimitado al contenido exclusivo </p>
+      </div>
+    </div>
+
+
+    </div>
+
+    <app-footer></app-footer>

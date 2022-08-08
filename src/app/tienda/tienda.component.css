@@ -1,0 +1,108 @@
+
+/*HEADER*/
+
+
+.contenedor-titulos{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    text-align:center;
+    font-size: 1em;
+    padding-bottom: 100px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   }
+
+
+
+
+/*CONTENEDOR DE LAS CAJAS DE LAS PROMOS*/
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-bottom: 150px;
+}
+
+
+
+/*DETALLES DE C/ PROMO*/
+.info{
+    padding-top:5px;
+  }
+  
+  
+  /*CLASE GENERAL DE LAS CAJAS DE PROMO*/
+  .caja{
+  
+   width: 280px;
+   height:600px;
+   margin-left: 60px;
+   border-radius: 15px;
+   font-weight: 800;
+   text-align: center;
+   margin: 0px auto;
+  }
+  
+  
+  /*CAJA DE LA PROMO 1*/
+  .caja1{
+   background:black;
+   border:2px solid white;
+   box-shadow: 3px 3px 10px #f44074, -3px -3px 10px #f44074, 3px 3px 10px #f44074 inset , -3px -3px 10px #f44074 inset, 3px 3px 10px #f44074, -3px -3px 10px #f44074, 3px 3px 10px #f44074 inset , -3px -3px 10px #f44074 inset; 
+   color:white;
+  }
+  
+  /*NOMBRE DE LAS PROMOS*/
+  .caja > h4{
+   margin-top: 25px;
+   font-size: 1.5em;
+  }
+  
+  
+  /*CAJA DE LAS PROMO 2*/
+  .caja2{
+  
+   background:black;
+   border:2px solid white;
+   box-shadow: 3px 3px 10px #3a7bf8, -3px -3px 10px #3a7bf8, 3px 3px 10px #3a7bf8 inset , -3px -3px 10px #3a7bf8 inset,3px 3px 10px #3a7bf8, -3px -3px 10px #3a7bf8, 3px 3px 10px #3a7bf8 inset , -3px -3px 10px #3a7bf8 inset; 
+   color:white;
+  }
+  
+  
+  /*CAJA DE LAS PROMO 3*/
+  .caja3{
+  
+   background:white;
+   border:2px solid white;
+   box-shadow: 4px 4px 10px #ccc, -4px -4px 10px #ccc, 4px 4px 10px #ccc inset , -4px -4px 10px #ccc inset,4px 4px 10px #ccc, -4px -4px 10px #ccc, 4px 4px 10px #ccc inset , -4px -4px 10px #ccc inset; 
+   color:black;
+  
+  }
+  
+  /*ESTILOS PARRAFO PRECIO */
+  .precio{
+   font-size: 50px;
+   font-weight: 800;
+   margin: 0px;
+   margin-bottom: 20px;
+  }
+  
+  
+  /*ESTILOS ENLACE SUSCRIBIRME */
+  a[href="#"]{
+   text-decoration:none;
+   color: red;
+   font-weight: 700;
+  }
+  
+  
+/*ESTILOS DE LAS IMAGENES*/
+
+img{
+    width: 200px;
+}
+
+
+#miperfil{
+    display:none;
+}
