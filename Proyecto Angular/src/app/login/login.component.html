@@ -1,0 +1,29 @@
+<div class="container">
+
+    
+
+    <form [formGroup] = "signupForm" (ngSubmit)="enviar(signupForm.value)" class="form"  id="form">
+        <h3 class="titulo">Ingresa a tu usuario</h3>
+        <div class="user">
+        <label for="user">Usuario</label>
+        <input formControlName="usuario"  type="text" name="user"  id="usuario"/>
+        </div>
+        
+        <div class="clave">
+        <label for="pass">Clave</label>
+        <input formControlName="clave"  type="text" name="pass" id="pass" />
+        </div>
+    
+        <div class="cajaboton">
+        <button [disabled]="signupForm.invalid" type="submit" id="boton" *ngIf="boton">Entrar</button>
+        </div>
+
+        <div class="info">
+            <p>No tienes cuenta? <a href="registrarse">Registrate</a></p>
+            <p>No recuerdas la contraseña? <a href="#">Ingresa aquí</a></p>
+        </div>
+    </form>
+
+
+</div>
+<app-footer></app-footer>
