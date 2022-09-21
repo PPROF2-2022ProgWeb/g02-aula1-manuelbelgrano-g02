@@ -25,7 +25,6 @@ input[type="password"]{
 
 }
 
-
 input[type="submit"] {
     width: 90px;
     height: 45px;
@@ -34,7 +33,7 @@ input[type="submit"] {
     font-size: 1em;
 }
 
-label, p{
+label{
     width: 100%;
     margin-top: 15px;
     display: block;
@@ -53,4 +52,5 @@ label, p{
 .nombre, .apellido, .email, .user, .clave, .info, .cajaboton{
     grid-template-rows: 1 fr, 1 fr, 1 fr, 1 fr, 1 fr, 1 fr, 1 fr, ;
 }
+
 
