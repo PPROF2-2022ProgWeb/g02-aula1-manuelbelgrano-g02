@@ -15,7 +15,7 @@
 
 - Biolé Amanda Paola
 
-- Calanit Artaza Carla Daniela
+- Artaza Carla Daniela Calanit
 
 
 ## TECNOLOGÍAS UTILIZADAS 🛠️
