@@ -1,0 +1,57 @@
+<div class="caja container col-md-3  offset-md-3 mx-auto p-4 border border-5">
+    <h3 class="text-center">Actualizar usuario</h3>
+     <form  (ngSubmit)="onSubmit()">
+
+        <div class="form-group my-1">
+            <label>Id</label>
+            <input type="text" class="form-control" id="id" name="id"
+            [(ngModel)] = "usuario.id">
+        </div>
+
+        <div class="form-group my-1">
+            <label>Username</label>
+            <input type="text" class="form-control" id="username" name="username"
+            [(ngModel)] = "usuario.username">
+        </div>
+
+        <div class="form-group my-1">
+            <label>Password</label>
+            <input type="text" class="form-control" id="password" name="password"
+            [(ngModel)] = "usuario.password">
+        </div>
+     
+    
+    <div class="form-group my-1">
+           <label>Nombre</label>
+           <input type="text" class="form-control" id="nombre" name="nombre"
+           [(ngModel)] = "usuario.nombre">
+       </div>
+    
+    <div class="form-group my-1">
+           <label>Apellido</label>
+           <input type="text" class="form-control" id="apellido" name="apellido"
+           [(ngModel)] = "usuario.apellido">
+       </div>
+
+       <div class="form-group my-1">
+        <label>Telefono</label>
+        <input type="text" class="form-control" id="telefono" name="telefono"
+        [(ngModel)] = "usuario.telefono">
+    </div>
+    
+       <div class="form-group my-1">
+        <label>Email</label>
+        <input type="text" class="form-control" id="email" name="email"
+        [(ngModel)] = "usuario.email">
+    </div>
+    
+    
+    
+    
+       <button class="btn btn-success my-3 ">Actualizar</button>
+
+     </form>
+    </div>
+
+
+    <app-footer></app-footer>

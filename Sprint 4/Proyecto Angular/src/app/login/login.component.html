@@ -1,0 +1,28 @@
+<div class="caja container col-md-3  offset-md-3 mx-auto  p-4 border border-5">
+    <h3 class="text-center">Iniciar sesion</h3>
+
+     <form (ngSubmit)="onSubmit()"  id="formulario">
+
+       <div class="form-group">
+       
+           <label>Usuario</label>
+           <input type="text" class="form-control" id="nombre" name="username"
+           [(ngModel)] = "loginData.username">
+       </div>
+   
+       <div class="form-group">
+           <label>Clave</label>
+           <input type="text" class="form-control" id="clave" name="password"
+           [(ngModel)] = "loginData.password">
+       </div>
+   
+       <button type="submit" class="btn btn-success my-2 ">Entrar</button>
+   
+   
+       <p>No estas registrado? <a
+       style="text-decoration: underline; cursor:pointer" [routerLink]= "['/registro']">Registrate aqui</a></p>
+     </form>
+
+   </div>
+
+   <app-footer></app-footer>

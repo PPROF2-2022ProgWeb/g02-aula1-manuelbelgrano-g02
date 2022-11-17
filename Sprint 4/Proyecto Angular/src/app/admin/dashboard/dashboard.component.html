@@ -1,0 +1,83 @@
+
+<div class="contenedor-admin  container">
+    <h1>Bienvenido al panel de administrador</h1>
+
+    <div class="caja-tablas">
+
+
+    <h3>Control de usuarios</h3>
+
+    <button (click)="agregaUsuario()" class="btn btn-success w-75 m-1">Agregar usuario</button>
+    <table class="table table-striped table-hover  mx-auto my-5">
+        
+        <thead class="table-dark">
+          <tr>
+          <th>ID</th>
+          <th>USUARIO</th>
+          <th>NOMBRE</th>
+          <th>APELLIDO</th>
+          <th>EMAIL</th>
+          <th>ACCIONES</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <tr *ngFor="let usuario of usuarios">
+            <td>{{usuario.id}}</td>
+            <td>{{usuario.username}}</td>
+            <td>{{usuario.nombre}}</td>
+            <td>{{usuario.apellido}}</td>
+            <td>{{usuario.email}}</td>
+            <td>
+              <button (click)="actualizarUsuario(usuario.id)" class="btn btn-warning w-75 m-1">Actualizar</button>
+              <button (click)="eliminarUsuario(usuario.id)" class="btn btn-danger w-75 m-1">Eliminar</button>
+            </td>
+          </tr>      
+
+        </tbody>
+      </table>
+
+    </div>
+
+
+
+<div class="caja-tablas">
+
+ 
+
+      <h3>Control de promos</h3>
+
+      <button (click)="agregarProducto()" class="btn btn-success w-75 m-1">Agregar producto</button>
+
+
+      <table class="table table-striped table-hover   mx-auto my-5 ">
+        <thead class="table-dark">
+          <tr>
+          <th>ID</th>
+          <th>NOMBRE</th>
+          <th>DESCRIPCION</th>
+          <th>PRECIO</th>
+          <th>ACCIÒN</th>
+
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let producto of productos">
+            <td>{{producto.productoId}}</td>
+            <td>{{producto.nombreProducto}}</td>
+            <td>{{producto.descripcion}}</td>
+            <td>{{producto.precio}}</td>
+            <td>
+              <button (click)="actualizarProducto(producto.productoId)"class="btn btn-warning w-75 m-1">Actualizar</button>
+              <button (click)="eliminarProducto(producto.productoId)" class="btn btn-danger w-75 m-1">Eliminar</button>
+            </td>
+          </tr>      
+
+        </tbody>
+      </table>
+</div>
+
+</div>
+
+
+<app-footer></app-footer>

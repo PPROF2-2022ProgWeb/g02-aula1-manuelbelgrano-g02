@@ -1,0 +1,59 @@
+
+<div class="caja container col-md-3  offset-md-3 mx-auto p-4 border border-5">
+    <h3 class="text-center">Registrarse</h3>
+     <form (ngSubmit)="onSubmit()">
+
+        <p *ngIf="validarCamposVacios == true"  style="color: red ; font:bold;">Debes ingresar todos los datos</p>
+
+        <div class="form-group my-1">
+         
+            <label>Usuario</label>
+            <input type="text" class="form-control" id="usuario" name="usuario"
+            [(ngModel)] = "usuario.username">
+           
+        </div>
+
+        <div class="form-group my-1">
+            <label>Clave</label>
+            <input type="text" class="form-control" id="clave" name="clave"
+            [(ngModel)] = "usuario.password">
+        </div>
+  
+    <div class="form-group my-1">
+           <label>Nombre</label> 
+           <input type="text" class="form-control" id="nombre" name="nombre"
+           [(ngModel)] = "usuario.nombre">
+       </div>
+    
+    <div class="form-group my-1">
+           <label>Apellido</label>
+           <input type="text" class="form-control" id="apellido" name="apellido"
+           [(ngModel)] = "usuario.apellido" >
+       </div>
+    
+
+    
+       <div class="form-group my-1">
+        <label>Email</label>
+        <input type="text" class="form-control" id="email" name="email"
+        [(ngModel)] = "usuario.email">
+    </div>
+    
+    
+    
+        <div class="form-group my-1">
+           <label>Telefono</label>
+           <input type="text" class="form-control" id="telefono" name="telefono"
+           [(ngModel)] = "usuario.telefono">
+       </div>
+  
+    
+       <button class="btn btn-success my-3 ">Registrarme</button>
+
+       <p>Ya estas registrado? <a  
+        style="text-decoration: underline; cursor:pointer" [routerLink]= "['/login']"
+        >Inicia sesion</a></p>
+     </form>
+    </div>
+
+    <app-footer></app-footer>
