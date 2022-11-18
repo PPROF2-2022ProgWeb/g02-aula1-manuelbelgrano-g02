@@ -7,7 +7,7 @@
 
 ## MAPA DE SITIO
 
-![Mapa](https://github.com/PPROF2-2022ProgWeb/g02-aula1-manuelbelgrano-g02/blob/main/Proyecto%20Angular/src/assets/mapa%20de%20sitio.png?raw=true)
+![Mapa](https://github.com/PPROF2-2022ProgWeb/g02-aula1-manuelbelgrano-g02/blob/main/Sprint%204/Proyecto%20Angular/src/assets/mapa%20de%20sitio.png?raw=true)
 
 
 
